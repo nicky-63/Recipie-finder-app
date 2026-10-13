@@ -1,0 +1,48 @@
+/* Custom Styles for Recipe Finder App */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card Styling & Hover Effects */
+.recipe-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Fixed Image Dimensions */
+.recipe-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Prep Time Badge */
+.time-badge {
+  background-color: #ffe6e6;
+  color: #dc3545;
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* Ingredient List Styling */
+.ingredient-list {
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.ingredient-list li {
+  margin-bottom: 4px;
+}
