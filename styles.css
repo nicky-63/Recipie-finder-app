@@ -1,46 +1,58 @@
-/* Custom Styles for Recipe Finder App */
-
-body {
-  background-color: #f8f9fa;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Cooking Matters UI Styling */
+.hero-section {
+  background: linear-gradient(135deg, #d9534f 0%, #b52b27 100%);
 }
 
-/* Card Styling & Hover Effects */
+.pill-btn {
+  border-radius: 50rem;
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+  color: #495057;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.pill-btn:hover, .pill-btn.active {
+  background-color: #d9534f;
+  color: white;
+  border-color: #d9534f;
+}
+
 .recipe-card {
   border: none;
-  border-radius: 12px;
-  overflow: hidden;
+  border-radius: 1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 .recipe-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
 }
 
-/* Fixed Image Dimensions */
-.recipe-img {
+.card-img-wrapper {
+  position: relative;
   height: 200px;
-  object-fit: cover;
-  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
-/* Prep Time Badge */
-.time-badge {
-  background-color: #ffe6e6;
-  color: #dc3545;
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-time {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #d9534f;
   font-weight: 600;
-  font-size: 0.85rem;
   padding: 6px 12px;
   border-radius: 20px;
-}
-
-/* Ingredient List Styling */
-.ingredient-list {
-  padding-left: 20px;
-  margin-bottom: 0;
-  font-size: 0.9rem;
-  color: #495057;
 }
 
 .ingredient-list li {
