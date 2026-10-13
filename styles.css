@@ -1,41 +1,60 @@
-/* Cooking Matters UI Styling */
-.hero-section {
-  background: linear-gradient(135deg, #d9534f 0%, #b52b27 100%);
+/* Custom Dark Emerald & Obsidian Palette */
+body {
+  background-color: #0b0f0d;
+  color: #e2e8f0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+.dark-card {
+  background-color: #121815;
+  border: 1px solid #1e2923;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.hero-section {
+  background: linear-gradient(180deg, #050807 0%, #0d1410 100%);
+}
+
+/* Category Filter Pills */
 .pill-btn {
   border-radius: 50rem;
-  border: 1px solid #dee2e6;
-  background-color: #f8f9fa;
-  color: #495057;
+  border: 1px solid #23332a;
+  background-color: #0d1410;
+  color: #a0aec0;
   font-weight: 500;
-  transition: all 0.2s ease;
+  padding: 6px 14px;
+  transition: all 0.2s ease-in-out;
 }
 
 .pill-btn:hover, .pill-btn.active {
-  background-color: #d9534f;
-  color: white;
-  border-color: #d9534f;
+  background-color: #198754;
+  color: #ffffff;
+  border-color: #198754;
+  box-shadow: 0 0 10px rgba(25, 135, 84, 0.4);
 }
 
+/* Recipe Card Hover Effects */
 .recipe-card {
-  border: none;
+  background-color: #121815;
+  border: 1px solid #1e2d24;
   border-radius: 1rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .recipe-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+  transform: translateY(-6px);
+  border-color: #198754;
+  box-shadow: 0 10px 25px rgba(25, 135, 84, 0.2) !important;
 }
 
+/* Image Wrappers & Badges */
 .card-img-wrapper {
   position: relative;
-  height: 200px;
+  height: 210px;
   overflow: hidden;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
 }
 
 .card-img-wrapper img {
@@ -48,13 +67,47 @@
   position: absolute;
   top: 12px;
   right: 12px;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #d9534f;
+  background-color: rgba(11, 15, 13, 0.85);
+  color: #2ecc71;
   font-weight: 600;
-  padding: 6px 12px;
+  font-size: 0.8rem;
+  padding: 5px 12px;
   border-radius: 20px;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  backdrop-filter: blur(4px);
 }
 
-.ingredient-list li {
-  margin-bottom: 4px;
+.badge-cuisine {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(11, 15, 13, 0.85);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid #334155;
+  backdrop-filter: blur(4px);
+}
+
+/* Input Fields Focus */
+.form-control:focus {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #198754 !important;
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25) !important;
+}
+
+/* Modal Customization */
+.modal-content {
+  background-color: #121815;
+}
+
+.meta-chip {
+  background-color: #0d1410;
+  border: 1px solid #1e2d24;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: center;
 }
