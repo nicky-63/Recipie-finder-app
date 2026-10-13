@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Finder App</title>
+  <!-- Bootstrap 5 CSS for clean layout -->
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-light min-vh-100 py-4">
+
+  <div class="container" style="max-width: 800px;">
+    <!-- App Header -->
+    <header class="text-center mb-4">
+      <h1 class="fw-bold text-danger">🍳 Recipe Finder</h1>
+      <p class="text-muted">Find delicious recipes with cooking times and ingredients!</p>
+    </header>
+
+    <!-- Search Controls -->
+    <div class="card shadow-sm border-0 p-3 mb-4">
+      <div class="row g-2">
+        <div class="col-md-8">
+          <input 
+            type="text" 
+            id="search-input" 
+            class="form-control" 
+            placeholder="Search by recipe name or ingredient (e.g. Pasta, Chicken)..." 
+          />
+        </div>
+        <div class="col-md-4">
+          <button id="search-btn" class="btn btn-danger w-100 fw-bold">
+            Search Recipes
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recipe Display Grid -->
+    <div id="recipe-container" class="row g-4">
+      <!-- Recipe cards will be injected here dynamically by JavaScript -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
